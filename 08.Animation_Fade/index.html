@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Fade</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+    <script>
+        $(function(){
+            var ex_show = $('.ex_show');
+            var ex_hide = $('.ex_hide');
+            var ex_box = $('.ex_box');
+
+            ex_show.click(function(){
+                ex_box.fadeIn()
+            })
+            ex_hide.click(function(){
+                ex_box.fadeOut();
+            })
+        })
+
+        $(function(){
+            var ex_show_3000 = $('.ex_show_3000');
+            var ex_hide_fast = $('.ex_hide_fast');
+            var ex_box_3f = $('.ex_box_3f');
+
+            ex_show_3000.click(function(){
+                ex_box_3f.fadeIn(3000);
+            })
+            ex_hide_fast.click(function(){
+                ex_box_3f.fadeOut('fast');
+            })
+        })
+
+    </script>
+    <style>
+        .ex_show{float:left;margin-right: 20px; cursor: pointer;}
+        .ex_hide{float:left;cursor: pointer;}
+        .ex_box{clear:both; float:left; width:100px; height:50px; background-color: yellow; border: 1px solid skyblue; margin:50px; border-radius: 10px; }
+        
+        .ex_box_3f{clear:both; float: left;width: 100px;height: 50px;background-color: yellow; border : 1px solid skyblue; margin: 50px; border-radius: 10px;}
+        .ex_show_3000{float:left; margin-right: 20px; cursor: pointer;}
+        .ex_hide_fast{float:left;cursor: pointer;}
+    </style>
+</head>
+<body>
+
+    <div style="width: 100%; height : 30%; display: flex; flex-direction: row; ">
+        <div>
+            <b class="ex_show">show click!!</b>
+            <b class="ex_hide">hide click!!</b>
+            <div class="ex_box"></div>
+        </div>    
+    
+    </div>
+
+
+    
+
+    
+    <b class="ex_show_3000">show click!</b>
+    <b class="ex_hide_fast">hide click!</b>
+    <div class="ex_box_3f"></div>
+    
+</body>
+</html>

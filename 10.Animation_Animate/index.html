@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+    <script>
+        $(function(){
+            $('.hello').animate({
+                top:100,
+                left:200
+            },5000,function(){
+                $('.hello').animate({
+                    top:50,
+                    left:50
+                },3000);
+            })
+        })
+
+
+    </script>
+    <style>
+        .hello{width:100px;height:50px;background:pink; position:absolute; top:50px;left:50px}
+    </style>
+</head>
+<body>
+
+    <div class="hello"></div>
+    
+</body>
+</html>

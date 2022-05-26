@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Slide</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+    <script>
+        // 기본 속도
+        $(function(){
+            var ex_show= $('.ex_show');
+            var ex_hide = $('.ex_hide');
+            var ex_box = $('.ex_box');
+
+            ex_show.click(function(){
+                ex_box.slideDown();
+            });
+            
+            ex_hide.click(function(){
+                ex_box.slideUp();
+            });
+        });
+
+        // 속도제어
+        $(function(){
+            var ex_show_ctrl = $('.ex_show_ctrl');
+            var ex_hide_ctrl = $('.ex_hide_ctrl');
+            var ex_box_ctrl = $('.ex_box_ctrl');
+
+            $(function(){
+                ex_show_ctrl.click(function(){
+                    ex_box_ctrl.slideDown(3000);
+                });
+            })
+            $(function(){
+                ex_hide_ctrl.click(function(){
+                    ex_box_ctrl.slideUp('fast');
+            });
+                });
+        });
+    </script>
+
+
+
+    <style>
+        .ex_box{clear : both; float : left; width : 100px; height : 50px; background-color: yellow; border : 1px solid skyblue; border-radius : 10px};
+        .ex_show{float : left; margin-right : 20px; cursor : pointer};
+        .ex_hide{float : left; cursor: pointer}; 
+    </style>
+    <style>
+        .ex_box_ctrl{float : left; width: 100px; height: 50px; background-color: yellow; border : 1px solid skyblue; border-radius: 10px};
+        .ex_show_ctrl{float : left; margin-right : 20px; cursor : pointer};
+        .ex_hide_ctrl{float : left; cursor: pointer};
+    </style>
+<body>
+    <div style="display : flex; flex-direction: column;">
+        <div style="display: flex; flex-direction: row;">
+            <div>
+                <b class="ex_show"> show click!  </b>
+            </div>
+            <div>
+                <b class="ex_hide"> hide click!  </b>
+            </div>            
+        </div>
+        <div>
+            <div class="ex_box"></div>
+        </div>
+    </div>
+<br>
+    <div style="display: flex; flex-direction: column;">
+        <div style="display : flex; flex-direction:  row;">
+            <div>
+                <b class="ex_show_ctrl"> show click! </b>
+            </div>
+            <div>
+                <b class="ex_hide_ctrl"> hide click! </b>    
+            </div>
+        
+        </div>
+        <div>
+            <div class="ex_box_ctrl"></div>
+        </div>
+    </div>   
+    
+</body>
+</html>

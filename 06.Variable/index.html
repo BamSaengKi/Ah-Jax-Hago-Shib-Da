@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+    <style>
+        .yellow_circle{width:40px;height:40px;border-radius:20px;background:yellow}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>    
+    <script>
+
+        $(function(){
+            var usa_hi = 'hi';
+            var jp_hi = 'konnichiha';
+            var kr_hi = 'annyeong';
+            var cn_hi = 'nihao';
+            alert(usa_hi);
+            alert(jp_hi);
+            alert(kr_hi);
+            alert(cn_hi);
+            var con1 = usa_hi + jp_hi;
+            alert(con1);
+            var con2 = con1 + kr_hi;
+            alert(con2)
+
+
+        })
+
+
+
+
+
+        $(function(){
+            var yellow_circle = $('.yellow_circle');
+            var yellow_circle_word = $('.yellow_circle_word');
+
+
+            yellow_circle.mouseenter(function(){
+                yellow_circle_word.text('마우스 포인터가 노란색원 안에 있습니다.');
+            })
+            yellow_circle.mouseleave(function(){
+                yellow_circle_word.text('마우스 포인터가 노란색원을 떠낫습니다.')
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div class="yellow_circle">
+    </div>
+        <p class="yellow_circle_word">
+            노란색 원에 마우스 포인터를 올리고 내려 보세요.
+        </p>
+    
+    
+</body>
+</html>

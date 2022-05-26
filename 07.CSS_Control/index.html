@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Control</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 20px;
+            background: yellow
+        }
+
+        .btn {
+            cursor: pointer
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+    <script>
+        // $('SELECTOR').css('color', 'red');
+        // .css('CSS속성',값);
+
+
+        $(function () {
+            var box = $('.box');
+            var btn_100px = $('.btn_100px');
+            var btn_200px = $('.btn_200px');
+            var btn_300px = $('.btn_300px');
+
+            btn_100px.click(function () {
+                box.css('width', '100px');
+            })
+            btn_200px.click(function () {
+                box.css('width', '200px');
+            })
+            btn_300px.click(function () {
+                box.css('width', '300px');
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+
+    <div class="box"></div>
+    <p class="btn btn_100px">100px</p>
+    <p class="btn btn_200px">200px</p>
+    <p class="btn btn_300px">300px</p>
+
+</body>
+
+</html>

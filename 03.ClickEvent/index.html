@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clickevent</title>
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+    <script>
+        $(function(){
+            $('.content').click(function(){
+                $('.content').hide();
+            })                
+        })
+    </script>
+
+    <script>
+        $(function(){
+            $('.btn_show').click(function(){
+                $('.btn_word').show();
+            })
+            $('.btn_hide').click(function(){
+                $('.btn_word').hide();
+            })
+        })
+    </script>
+    
+</head>
+<body>
+
+    <div class="content">
+        hello world
+    </div>
+    
+    <div class = "btn_word">
+        hello jquery
+    </div>
+    <button class = "btn_show" style="padding:3px">show</button>
+    <button class = "btn_hide" style="padding:3px">hide</button>
+</body>
+</html>

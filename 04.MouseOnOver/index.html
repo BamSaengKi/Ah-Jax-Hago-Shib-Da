@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseonover</title>
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+    <script>
+        $(function () {
+            $('.yellow_circle').mouseenter(function () {
+                $('.yellow_circle_word').text('마우스 포인터가 노란색원 안에 있습니다.')
+            });
+            $('.yellow_circle').mouseleave(function () {
+                $('.yellow_circle_word').text('마우스 포인터가 노란색원을 떠났습니다.')
+            })
+        })
+        // 올려놓으면 파란색 테두리 벗어나면 빨간색 테두리
+        $(function(){
+            var hover1 = $('.hover1');
+            hover1.hover(function(){
+                hover1.css('border','5px solid blue');
+            },function(){
+                hover1.css('border','5px solid red');
+            })
+        })
+
+
+    </script>
+    <style>
+        .hover1{width:100px; height:50px; background: yellow;}
+    </style>
+</head>
+
+<body>
+
+    <div class="yellow_circle" style="width:40px;height:40px;border-radius:20px;background-color:yellow">
+
+    </div>
+    <p class="yellow_circle_word">노란색 원에 마우스 포인터를 올리고 내려보세요.</p>
+
+
+    <div class = "hover1">
+
+    </div>
+</body>
+
+</html>

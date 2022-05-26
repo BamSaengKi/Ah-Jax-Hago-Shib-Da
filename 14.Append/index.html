@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+    <!-- Append
+         먹을대상.append(먹힐대상); -->
+    <script>
+        $(function(){
+            var ex_wrap = $('.ex_wrap');
+            var ex_p = $('.ex_p')
+            
+            ex_wrap.click(function(){
+                ex_wrap.append(ex_p);
+            })
+            
+            
+        })
+    </script>
+
+    <script>
+        $(function(){
+            var ex_wrap2 = $('.ex_wrap2');
+            var ex_p2 = $('.ex_p2')
+
+            ex_wrap2.click(function(){
+                ex_p2.appendTo(ex_wrap2);
+            })
+        })
+    </script>
+    <style>
+        .ex_wrap{width : 400px; height: 300px;border : 5px solid yellow};
+        .ex_wrap p{clear:both;float:left;margin-left:20px;border:0};
+    </style>
+    <style>
+        .ex_wrap2{width : 400px; height: 300px; border : 5px solid #ff4400};
+        .ex_wrap2 p{clear:both;float:left;margin-left:20px; border:0};
+    </style>
+</head>
+<body>
+    <div class="ex_wrap"></div>
+    <p class="ex_p">asimo</p>
+    <p class="ex_p">honda</p>
+    <p class="ex_p">iphone5</p>
+    <p class="ex_p">macbook</p>
+    <p class="ex_p">ipad</p>
+
+
+
+    <br><br><br>
+    <div class="ex_wrap2"></div>
+    <p class="ex_p2">!asimo</p>
+    <p class="ex_p2">!honda</p>
+    <p class="ex_p2">!iphone5</p>
+    <p class="ex_p2">!macbook</p>
+    <p class="ex_p2">!ipad</p>
+</body>
+</html>

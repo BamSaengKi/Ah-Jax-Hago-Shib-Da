@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+    <!-- 대상체클래스.addClass('추가할 클래스 이름') -->
+    <script>
+        $(function(){
+            var base = $('.base');
+            base.addClass('base_text');
+        })
+    </script>
+    <script>
+        $(function(){
+            var id2 =$('#each2');
+            id2.removeClass('common')
+        })
+        
+    </script>
+
+    <style>
+        .base{border:4px solid yellow}
+        .base_text{font-weight: bold;color: hotpink;}
+    </style>
+    <style>
+        .common{font-size:20px;color:hotpink}
+    </style>
+</head>
+<body>
+    <p class="base">hello world</p><br><br><br>
+    
+
+
+    <div id="each1" class="common">hello world</div>
+    <div id="each2" class="common">hello world</div>
+</body>
+</html>

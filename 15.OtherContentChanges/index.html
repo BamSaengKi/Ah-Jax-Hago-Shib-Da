@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Content</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+
+    <script>
+        // empty
+        $(function(){
+            var hello = $('.hello');
+            hello.click(function(){
+                hello.empty();
+            })
+        })
+
+        // remove
+        $(function(){
+            var hello2 = $('.hello2');
+            hello2.click(function(){
+                hello2.remove();
+            })
+        })
+
+        // val
+        $(function(){
+            $('.text1').mouseenter(function(){
+                $('.text1').val('이름을 입력하세요.')
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <!-- empty (태그 안의 내용만 지워짐) -->
+    <div class="hello">hello world</div><br>
+    <!-- remove (태그 자체를 삭제) -->
+    <div class="hello2">hello world 2</div>
+    <!-- val (텍스트 필드안의  변경) -->
+    <div>
+        <input type="text" class="text1" value="input your name">
+    </div>
+    
+</body>
+</html>

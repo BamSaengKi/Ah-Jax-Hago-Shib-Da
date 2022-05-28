@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input태그 선택한 파일 목록보기</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+
+    <!-- files를 사용하면 선택한 파일의 목록을 볼 수 있습니다. -->
+
+    <script>
+        $(function () {
+
+
+            $("#fileUpload").change(function () {
+                console.log('Hello I am event ^-^;');
+            })
+        })
+
+        $(function(){
+            $("#fileUpload").change(function() {
+                console.log($('#fileUpload')[0].files)
+            })
+        })
+
+        $(function(){
+        $("#fileUpload").change(function(){
+            fileList = $("#fileUpload")[0].files;
+            fileListTag = '';
+            for(i = 0 ; i < fileList.length; i++){
+                fileListTag += "<li>" + fileList[i].name + "</li>"
+            }
+            $('#fileList').html(fileListTag);
+
+        })
+    })
+    </script>
+</head>
+
+<body>
+
+    <form method="post" action="upload-multiple.php" enctype="multipart/form-data">
+        <input type="file" id="fileUpload" name="upload[]" multiple>
+
+        <ul id="fileList"></ul>
+        <input type="submit" value="send">
+    </form>
+</body>
+
+</html>

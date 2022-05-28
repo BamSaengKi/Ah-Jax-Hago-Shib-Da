@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Each로 배열 다루기</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+    <script>
+        $(function(){
+            var arr = new Array();
+            arr = ["korea", "usa", "japan", "united kingdom", "germany"];
+            for(i=0;i<arr.length; i++){
+                console.log(arr[i]);
+            }
+        })
+
+        $(function(){
+            var arr = new Array();
+            arr = ["korea", "usa", "japan", "united kingdom", "germany"];
+            $.each(arr, function(idx, item){
+                console.log('idx is' + idx);
+                console.log('item is ' + item);
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

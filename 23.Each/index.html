@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Each</title>
+    <title>Each로 태그 다루기</title>
     <script src="http://code.jquery.com/jquery-1.6.js"></script>
     <script>
 
@@ -22,14 +22,26 @@
                 $(this).text(txt);
             })
         })
-    </script>
-    <script>
+        // attr로 하려 했으나 type property can't be changed 에러 나서 prop으로 바꿈
+        // attr()는HTML의속성을 취급
+        // prop()는JavaScript프로파티을 취급
+
+        $(function () {
+            $('input').each(function () {
+                $(this).prop('type', 'button');
+            })
+        });
+
         $(function(){
-    $('input').each(function(){
-        $(this).attr('type','button');
-    })
-});
+            $('input').each(function(){
+                $(this).addClass('haro')
+            })
+        })
     </script>
+    <style>
+        .haro{background:skyblue;}
+    </style>
+    
 </head>
 
 <body>
@@ -42,6 +54,8 @@
     <p>haro</p>
     <p>haro</p>
 
+
+
     <b>haro</b><br>
     <b>haro</b><br>
     <b>haro</b><br>
@@ -49,10 +63,12 @@
     <b>haro</b><br>
     <b>haro</b><br>
 
-    <input type="text" value="haro">
-    <input type="text" value="haro">
-    <input type="text" value="haro">
-    <input type="text" value="haro">
+
+
+    <input type="text" value="haro"/>
+    <input type="text" value="haro"/>
+    <input type="text" value="haro"/>
+    <input type="text" value="haro"/>
 
 
 </body>

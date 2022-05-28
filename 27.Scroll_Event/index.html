@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지 바닥 감지</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+    <script>
+        $(function(){
+            var page = 1;
+
+            var docHeight = $(document).height();
+            var winHeight = $(window).height();
+
+            $(window).scroll(function(){
+                if($(window).scrollTop() + winHeight >= docHeight){
+                    page++;
+                    // alert('Here is Bottom of This Page')
+                    $('.content').append('<p>New Hello World' + page +'</p>');
+                    $('.content').append('<p>New Hello World' + page +'</p>');
+                    $('.content').append('<p>New Hello World' + page +'</p>');
+                    $('.content').append('<p>New Hello World' + page +'</p>');
+                    $('.content').append('<p>New Hello World' + page +'</p>');
+                    $('.content').append('<p>New Hello World' + page +'</p>');
+
+                }
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+    <div class="content">
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+    </div>
+    
+</body>
+</html>

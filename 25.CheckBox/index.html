@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스 체크여부 확인하기</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+
+    <!-- 체크여부 알아보는 코드
+         $(선택자).is(":checked");
+        
+         if($(선택자).is(":checked")== true){
+             console.log("체크된 상태")
+        }
+
+        if($(선택자).is(":checked")== false){
+            console.log("체크 안 된 상태")
+        }
+        
+    -->
+
+    <script>
+        $(function(){
+            if($('input').is(":checked")== true){
+                $('b').text('체크된 상태');
+            }else{
+                $('b').text('체크 안된 상태');
+            }
+        })
+        $(function(){
+            if($('input:nth-child(2)').is(":checked")== true){
+                $('p').text('체크된 상태');
+            }else{
+                $('p').text('체크 안된 상태');
+            }
+        })
+    </script>
+</head>
+<body>
+    <input type="checkbox" checked />
+    <b></b> <br><br>
+    <input type="checkbox" />
+    <p></p>
+    
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Each</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+    <script>
+
+        $(function () {
+            for (i = 1; i <= $('p').length; i++) {
+                txt = $('p:nth-child(' + i + ')').text() + i;
+                $('p:nth-child(' + i + ')').text(txt);
+            }
+        })
+
+        $(function () {
+            $('b').each(function (idx) {
+                txt = $(this).text() + (idx + 1)
+                $(this).text(txt);
+            })
+        })
+    </script>
+    <script>
+        $(function(){
+    $('input').each(function(){
+        $(this).attr('type','button');
+    })
+});
+    </script>
+</head>
+
+<body>
+
+    <p>haro</p>
+    <p>haro</p>
+    <p>haro</p>
+    <p>haro</p>
+    <p>haro</p>
+    <p>haro</p>
+    <p>haro</p>
+
+    <b>haro</b><br>
+    <b>haro</b><br>
+    <b>haro</b><br>
+    <b>haro</b><br>
+    <b>haro</b><br>
+    <b>haro</b><br>
+
+    <input type="text" value="haro">
+    <input type="text" value="haro">
+    <input type="text" value="haro">
+    <input type="text" value="haro">
+
+
+</body>
+
+</html>

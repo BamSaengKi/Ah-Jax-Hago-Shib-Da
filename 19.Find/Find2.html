@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find와 This</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+    <script>
+
+        $(function () {
+            $('.hello').click(function () {
+                $(this).find('b').css('color', 'skyblue')
+            })
+        })
+
+    </script>
+
+    <style>
+        .hello {
+            border: 1px solid skyblue;
+            margin-bottom: 20px
+        }
+
+        ;
+    </style>
+</head>
+
+<body>
+
+    <div class="hello">
+        <p>php</p>
+        <b>html5</b>
+    </div>
+
+    <div class="hello">
+        <p>php</p>
+        <b>html5</b>
+        <h4>css3</h4>
+    </div>
+
+    <div class="hello">
+        <p>php</p>
+        <b>html5</b>
+        <h4>css3</h4>
+    </div>
+
+</body>
+
+</html>

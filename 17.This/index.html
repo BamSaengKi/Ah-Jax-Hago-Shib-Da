@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,183 @@
     <title>This</title>
     <script src="http://code.jquery.com/jquery-1.6.js"></script>
     <script>
-        
+
+        // 예제 : This가 없다면....
+        $(function () {
+
+
+
+            $('.click1').click(function () {
+                $('.click1').text('저만 클릭 하셨군요 ^-^');
+            });
+
+            $('.click2').click(function () {
+                $('.click2').text('저만 클릭 하셨군요 ^-^');
+            });
+
+            $('.click3').click(function () {
+                $('.click3').text('저만 클릭 하셨군요 ^-^');
+            });
+
+            $('.click4').click(function () {
+                $('.click4').text('저만 클릭 하셨군요 ^-^');
+            });
+
+            $('.click5').click(function () {
+                $('.click5').text('저만 클릭 하셨군요 ^-^');
+            });
+
+            $('.click6').click(function () {
+                $('.click6').text('저만 클릭 하셨군요 ^-^');
+            });
+
+            $('.click7').click(function () {
+                $('.click7').text('저만 클릭 하셨군요 ^-^');
+            });
+
+            $('.click8').click(function () {
+                $('.click8').text('저만 클릭 하셨군요 ^-^');
+            });
+
+            $('.click9').click(function () {
+                $('.click9').text('저만 클릭 하셨군요 ^-^');
+            });
+
+        });
+
+
+        // This를 사용하면...
+        $(function () {
+            var view = $('.view');
+
+            view.click(function () {
+                $(this).text('저만 클릭하셨군요 ^-^')
+            })
+        })
+
     </script>
+
+    <style>
+        /* 예제 : This가 없다면.... */
+        .click1 {
+            clear: both;
+            float: left;
+            padding: 10px;
+            background: hotpink;
+            cursor: pointer;
+            margin-bottom: 5px
+        }
+
+        .click2 {
+            clear: both;
+            float: left;
+            padding: 10px;
+            background: hotpink;
+            cursor: pointer;
+            margin-bottom: 5px
+        }
+
+        .click3 {
+            clear: both;
+            float: left;
+            padding: 10px;
+            background: hotpink;
+            cursor: pointer;
+            margin-bottom: 5px
+        }
+
+        .click4 {
+            clear: both;
+            float: left;
+            padding: 10px;
+            background: hotpink;
+            cursor: pointer;
+            margin-bottom: 5px
+        }
+
+        .click5 {
+            clear: both;
+            float: left;
+            padding: 10px;
+            background: hotpink;
+            cursor: pointer;
+            margin-bottom: 5px
+        }
+
+        .click6 {
+            clear: both;
+            float: left;
+            padding: 10px;
+            background: hotpink;
+            cursor: pointer;
+            margin-bottom: 5px
+        }
+
+        .click7 {
+            clear: both;
+            float: left;
+            padding: 10px;
+            background: hotpink;
+            cursor: pointer;
+            margin-bottom: 5px
+        }
+
+        .click8 {
+            clear: both;
+            float: left;
+            padding: 10px;
+            background: hotpink;
+            cursor: pointer;
+            margin-bottom: 5px
+        }
+
+        .click9 {
+            clear: both;
+            float: left;
+            padding: 10px;
+            background: hotpink;
+            cursor: pointer;
+            margin-bottom: 5px
+        }
+
+        /* This를 사용하면.. */
+
+        .view {
+            clear: both;
+            float: left;
+            padding: 10px;
+            background: hotpink;
+            cursor: pointer;
+            margin-bottom: 5px
+        }
+    </style>
 </head>
+
 <body>
-    
+    <!--  예제 : This가 없다면.... -->
+    <div style="width : 393.25px; display: flex; flex-direction: column;">
+        <div class="click1">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="click2">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="click3">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="click4">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="click5">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="click6">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="click7">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="click8">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="click9">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+    </div>
+    <!-- This를 사용하면.. -->
+    <div style="width : 393.25px; display : flex; flex-direction: column ;padding-top:50px">
+        <div class="view">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="view">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="view">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="view">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="view">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="view">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="view">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+        <div class="view">저를 누르고 저만 눌렀다는 글이 나오게끔 해주세요.</div>
+    </div>
+
 </body>
+
 </html>

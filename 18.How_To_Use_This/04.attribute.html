@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+    <script>
+        $(function(){
+            $('.click').click(function(){
+                alert($(this).attr('class'))
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="click"><p>pinkcoding</p></div>
+    <div class="click"><b>tomodevel</b></div>
+    <div class="click"><span>start web coding</span></div>
+    <div class="click"><section>beanscent</section></div>
+</body>
+</html>

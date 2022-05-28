@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After</title>
+    <script src="http://code.jquery.com/jquery-1.6.js"></script>
+    <!-- after 사용방법
+         선택자.after(추가할 태그)
+    -->
+    <script>
+        $(function(){
+            $('h1').after("<b>html5</b>")
+        })
+
+
+
+    </script>
+
+    <script>
+        $(function(){
+            $('p:nth-child(3)').after("<p>4</p>")
+        })
+    </script>
+</head>
+<body>
+
+
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+    <p>9</p>
+
+    <h1>php</h1>
+    <h4>css3</h4>
+
+    
+</body>
+</html>
